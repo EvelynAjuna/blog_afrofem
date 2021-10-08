@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <title>Bakery website</title>
+    <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+    <style>
+    
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            
+
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        }
+
+        ul#menu li {
+        display:inline;
+        text-align:center;
+        font-color:white;
+        font-family: 'Neutraface Text', sans-serif;
+        background-color: #ffffff; 
+        color: white;
+        }
+
+        img{
+        max-width:180px;
+        }
+
+        input[type=file]{
+        padding:10px;
+        background:#2d2d2d;}
+
+        .form-group:nth-child(4) .custom-control-label:after,
+    .form-group:nth-child(4) .custom-control-label:before {
+    margin-top: 0.45em;
+    }
+
+        
+       
+    </style>
+
+
+    
+    </head>
+    <body>
+
+
+     <div class="content" >
+        <div class="container">
+        <div class="col-md-6">
+        <div class="card card-primary">
+
+        
+              <div class="card-header">
+                <h3 class="card-title">Place your order here</h3>
+              </div>
+
+
+        
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                    <label for="all_name">Full name:</label><br>
+                <input type="text" name="all_names" value=""><br>
+
+
+                <label for="contact">Contacts:</label><br>
+                <input type="tel" name="contact" value=""><br>
+
+
+                <label for="area">Location:</label><br>
+                <input type="text" name="area" value=""><br>
+
+                <label for="pdate">Pick-up date:</label><br>
+                <input type="date" name="pdate" value=""><br>
+
+
+                <div>
+
+                    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                    <p><labe class="input-group-text"for="file" style="cursor: pointer;">Upload Image</labe></p>
+                    <p><img id="output" width="200" /></p>
+
+                    <script>
+                    var loadFile = function(event) {
+                        var image = document.getElementById('output');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                    </script>
+                
+                </div>
+                
+                <div>
+
+                    <p>Choose the flavor you like:</p>
+                <form > 
+                    <ul> 
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="VANILLA" value="Vanilla" name="fav_flavor" class="custom-control-input">
+                        <label class="custom-control-label" for="VANILLA">Vanilla</label>
+                    </div>
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="LEMON" name="fav_flavor" value="Lemon" class="custom-control-input">
+                        <label class="custom-control-label" for="LEMON">Lemon</label>
+                    </div>
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="CHOCOLATE" name="fav_flavor" value="Chocolate" class="custom-control-input">
+                        <label class="custom-control-label" for="CHOCOLATE">Chocolate</label>
+                    </div>
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="STRAWBERRY" name="fav_flavor" value="Strawberry" class="custom-control-input">
+                        <label class="custom-control-label" for="STRAWBERRY">Strawberry</label>
+                    </div>
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="rVELVET" name="fav_flavor" value="Red velvet" class="custom-control-input">
+                        <label class="custom-control-label" for="rVELVET">Red velvet</label>
+                    </div>
+
+                    <div class="form-group custom-control custom-radio ">
+                        <input type="radio" id="gCHOCOLATE" name="fav_flavor" value="German Chocolate" class="custom-control-input">
+                        <label class="custom-control-label" for="gCHOCOLATE">German Chocolate</label>
+                    </div>
+
+ 
+                    </form>
+
+                </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            </div>
+
+            
+
+        </div>
+        </div>
+
+        
+
+    </body>
+
+
+</html>
